@@ -1,0 +1,98 @@
+/* 1. Root Variables - Color Palette */
+:root {
+    --primary-color: #032351;    /* Deep navy blue */
+    --secondary-color: #fff7dd;  /* Warm cream */
+    --tertiary-color: #ffffff;
+    --accent-light: #c8d7dc;     /* Light blue-grey */
+    --accent-medium: #91b7db;    /* Medium blue */
+    --accent-dark: #5a98da;      /* Bright blue */
+}
+
+/* 2. Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 3. Body Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* 4. Major Section Styles */
+header {
+    background-color: var(--primary-color);
+    min-height: calc(100vh - 60px); /* Subtract footer height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero {
+    background-color: var(--accent-light);
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.main-content {
+    background-color: var(--secondary-color);
+    padding: 60px 5%;
+}
+
+.contact {
+    background-color: var(--accent-medium);
+    color: var(--secondary-color);
+    padding: 60px 5%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;  /* Add this to ensure proper alignment */
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--primary-color); /* Add this to match header */
+}
+
+.copyright {
+    color: var(--tertiary-color);
+    font-size: 14px;
+}
+
+/* 5. Logo Styles */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-logo {
+    max-height: 120px;  /* You can adjust this size as needed */
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 3px rgba(0,0,0,0.1));
+    opacity: 0.9;
+    margin: 0;
+}
+
+.logo-small {
+    max-height: 40px;
+    width: auto;
+}
+
+/* Responsive logo adjustments */
+@media (max-width: 768px) {
+    .main-logo {
+        max-height: 40px;
+    }
+    
+    .logo-small {
+        max-height: 30px;
+    }
+}
